@@ -7,9 +7,9 @@
 entry *findName(char *key, hashtable *ht)
 {
     /* TODO: implement */
-	entry *e;
-	int index = hash(ht,key);
-	for(e = ht->table[index]; e != NULL; e = e->pNext) {
+    entry *e;
+    int index = hash(ht,key);
+    for(e = ht->table[index]; e != NULL; e = e->pNext) {
         if(strcasecmp(key,e->lastName)==0) {
             return e;
         }

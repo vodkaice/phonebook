@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 
     /*optimize with hash */
 #if defined(OPT)
-	int tablesize = 42737;
+    int tablesize = 42737;
     hashtable *ht = createTable(tablesize);
     clock_gettime(CLOCK_REALTIME, &start);
     while (fgets(line, sizeof(line), fp)) {
