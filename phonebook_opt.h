@@ -18,7 +18,16 @@ typedef struct __PHONE_BOOK_ENTRY {
     struct __PHONE_BOOK_ENTRY *pNext;
 } entry;
 
-entry *findName(char lastname[], entry *pHead);
-entry *append(char lastName[], entry *e);
+typedef struct hashtable {
+	int size;
+	struct entry **table;
+} hashtable;
+
+//entry *findName(char lastname[], entry *pHead);
+//entry *append(char lastName[], entry *e);
+entry *findName(char *key, hashtable *ht);
+entry *append(char *key, hashtable *ht);
+hashtable *create(int size);
+int hash(hashtable *hashtable, char *key);
 
 #endif
