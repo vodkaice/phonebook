@@ -47,10 +47,10 @@ int main(int argc, char *argv[])
     __builtin___clear_cache((char *) pHead, (char *) pHead + sizeof(entry));
 #endif
 
-/*optimize with hash */
+    /*optimize with hash */
 #if defined(OPT)
 	int tablesize = 42737;
-	hashtable *ht = create(tablesize);
+    hashtable *ht = createTable(tablesize);
     clock_gettime(CLOCK_REALTIME, &start);
     while (fgets(line, sizeof(line), fp)) {
         while (line[i] != '\0')
